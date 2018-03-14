@@ -8,7 +8,7 @@ Some artifacts may not be present on all OSX versions.
 * /Library/Receipts/InstallHistory.plist and /private/var/log/install.log (software installatiom history)
 * /var/db/receipts/ (bill of materials files)
 * /Applications/[Application].app/Contents/_MASReceipt/receipt (BOM files for application)
-* /private/var/log/install.log
+* /private/var/log/install.log (only applications installed through packages)
 
 ## Network
 * /private/var/db/dhcpclient/leases/ (dhcp leases)
@@ -22,24 +22,69 @@ Some artifacts may not be present on all OSX versions.
 * /Library/Preferences/SystemConfiguration/preferences.plist (e.g. NETBIOS name, USB interfaces, DNS servers)
 * /Library/Preferences/SystemConfiguration/com.apple.smb.server.plist (NETBIOS name)
 * /Library/Preferences/.GlobalPreferences.plist (timezone)
+* ~/.Trash (trash folder for user)
+
+## GUI
+* ~/Library/Preferences/com.apple.finder.plist (e.g. volumes and recent files)
+* ~/Library/Preferences/com.apple.sidebarlists.plist
+* ~/Library/Application Support/com.apple.sharedfilelist/com.appleLSSharedFileList.FavoriteServers.sfl
+* ~/Library/Preferences/com.apple.dock.plist
+* ~/Library/Preferences/com.apple.desktop.plist 
+* ~/Library/Application Support/Dock/desktoppicture.db
+* ~/Library/Preferences/com.apple.spaces.plist
+* ~/Library/Saved Application State/<Bundle ID>.savedState ~/Library/Containers/<BundleID>/Data/Library/Saved Application State/
 
 ## Recent folders and mounted volumes
 * ~/Library/Preferences/com.apple.finder.plist
 * ~/Library/Preferences/com.apple.DiskUtility.plist
-* ~/Library/Preferences/com.apple.sidebarlists.plist (sidebar stuff)
+For <10.10:
+* ~/Library/Preferences/com.developer.app.LSSharedFileList.plist (e.g. recent documents per application.)
+* ~/Library/Preferences/com.apple.recentitems.plist (e.g. applications, documents, servers, hosts)
+For >10.11
+* ~/Library/Preferences/com.apple.finder.plist (recent folders)
+* ~/Library/Application Support/com.apple.sharedfilelist/.*sfl (recent files and other interesting artifacts)
 
 
 ## Accounts
-* /Library/Preferences/com.apple.preferences.accounts.plist
+* /Library/Preferences/com.apple.preferences.accounts.plist (deleter users)
+* /Library/Preferences/com.apple.loginwindow.plist (e.g. last connected user, whether there is a autologin user, password for autologin)
+* /private/var/db/dslocal/nodes/Default/users/[username].plist and /private/var/db/dslocal/nodes/Default/groups/[groupname].plist (information about users and groups)
+* ~/Library/Accounts/Accounts3.sqlite (e.g. Mail.app, Messages, Social Media)
+
+## Applications
+
+### Mail.app
+* ~/Library/Mail/V3/ (e.g. .emlx, .mbox files)
+* ~/Library/Mail/V3/MailData (e.g. email rules, account information)
+* ~/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/
+* ~/Library/Caches/com.apple.mail/Cache.db
+* ~/Library/Containers/com.apple.mail/Data/Library/Caches/com.apple.mail/Cache.db
+* ~/Library/Containers/com.apple.mail/Data/Library/Preferences/com.apple.mail.plist (e.g. mail searches through spothlight)
+ 
+### Microsoft Office
+* ~Library/Preferences/com.microsoft.office.plist (2011 MRUs)
+* ~/Library/Containers/com.microsoft.<app>/Data/Library/Preferences/com.microsoft.<app>.securebookmarks.plist (2016 MRUs)
+
+### Save Application State
+* ~/Library/Containers/<bundle‐ ID>/Data/Library/Saved Application State/ (windows.plist contains information about windows that should be opened when the application is executed)
+
+### Shell History
+* ~/.sh_history (Korn shell)
+* ~/.bash_history (Bash)
+* ~/.zsh_history/, ~/.zhistory (Zshell)
+* ~/.bash_sessions/<GUID>.history (>10.11)
+* /var/root/[ONE_OF_THE_ABOVE]
 
 ## Backups
 * /Library/Preferences/com.apple.TimeMachine.plist
 * /var/db/com.apple.TimeMachine.SnapshotDates.plist
 
+## Volumes, File System and Boot information
+* /System/Library/CoreServices/boot.efi (boot UUID)
+* ~/Library/Logs/DiskUtility.log
+* ~/Library/Logs/fsck_hfs.log or ~/Library/Logs/fsck_apfs.log (HFS and APFS file system check log)
 
 
-## Boot UUID
-* /System/Library/CoreServices/boot.efi
 
 ## Printing
 * /var/log/cups/page_log
@@ -49,7 +94,6 @@ Some artifacts may not be present on all OSX versions.
 * /private/var/log/cups/access_log 
 * /private/var/log/cups/error_log 
 * /private/var/log/cups/page_log 
-
 
 
 
