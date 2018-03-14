@@ -14,53 +14,53 @@ Application logs:
 syslog replacement: /private/var/log/asl/ (>10.5.6). Can be checked using syslog. 
 /var/log/asl.log (10.4). It is plaintext.
 
-/var/log/asl.db (10.5-10.5.6). Binary Format and can be checked using syslog -f.
+* /var/log/asl.db (10.5-10.5.6). Binary Format and can be checked using syslog -f.
 
-* Audit logs (Can be read using praudit -xn): 
-/var/audit
-/private/var/audit/
+Audit logs (Can be read using praudit -xn): 
+* /var/audit
+* /private/var/audit/
 
 * Recent folders and mounted volumes:
-~/Library/Preferences/com.apple.finder.plist
-~/Library/Preferences/com.apple.DiskUtility.plist
-~/Library/Preferences/com.apple.sidebarlists.plist (sidebar stuff)
+* ~/Library/Preferences/com.apple.finder.plist
+* ~/Library/Preferences/com.apple.DiskUtility.plist
+* ~/Library/Preferences/com.apple.sidebarlists.plist (sidebar stuff)
 
 Wi-Fi
-/Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist
-/Library/Preferences/SystemConfiguration/com.apple.network.identification.plist. Also, kernel.log can be used to search for network country code.
+* /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist
+* /Library/Preferences/SystemConfiguration/com.apple.network.identification.plist. Also, kernel.log can be used to search for network country code.
 
 Accounts
-/Library/Preferences/com.apple.preferences.accounts.plist
+* /Library/Preferences/com.apple.preferences.accounts.plist
 
 Backups:
-/Library/Preferences/com.apple.TimeMachine.plist
-/var/db/com.apple.TimeMachine.SnapshotDates.plist
+* /Library/Preferences/com.apple.TimeMachine.plist
+* /var/db/com.apple.TimeMachine.SnapshotDates.plist
 
 Installs and updates:
 install.log??
-/Library/Preferences/com.apple.SoftwareUpdate.plist
-/Library/Receipts/InstallHistory.plist
-/var/db/receipts/ 
+* /Library/Preferences/com.apple.SoftwareUpdate.plist
+* /Library/Receipts/InstallHistory.plist
+* /var/db/receipts/ 
 
 Boot UUID:
 -/System/Library/CoreServices/boot.efi
 
 What is on system.log:
--Backup logs
--Boot/reboot/shutdown
+* Backup logs
+* Boot/reboot/shutdown
 
 Kernel.log:
--Mac addresses
+* Mac addresses
 
 daily.log:
--Disk Usage History
--Time Zone Changes
+* Disk Usage History
+-* Time Zone Changes
 
 Printing:
-/var/log/cups/page_log
-/var/log/cups/access_log
-/private/var/spool/cups (printing jobs. Can be parsed using cups_control from http://jafat.sourceforge.net/)
-/etc/cups/printers.conf + /Library/Preferences/org.cups.printers.plist: printer information
-/private/var/log/cups/access_log 
-/private/var/log/cups/error_log 
-/private/var/log/cups/page_log 
+* /var/log/cups/page_log
+* /var/log/cups/access_log
+* /private/var/spool/cups (printing jobs. Can be parsed using cups_control from http://jafat.sourceforge.net/)
+* /etc/cups/printers.conf + /Library/Preferences/org.cups.printers.plist: printer information
+* /private/var/log/cups/access_log 
+* /private/var/log/cups/error_log 
+* /private/var/log/cups/page_log 
