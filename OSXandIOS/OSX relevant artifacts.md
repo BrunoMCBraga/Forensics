@@ -22,53 +22,7 @@ On this cheat sheet i do not discriminate the versions on which the artifacts ar
 * /Library/Preferences/SystemConfiguration/com.apple.smb.server.plist (NETBIOS name)
 * /Library/Preferences/.GlobalPreferences.plist (timezone)
 
-## System logs
-* /Library/Logs
-* /private/var/db/diagnostics/
-* /private/var/db/uuidtext
-* /private/var/log (multiple logs. system.log caputes clock changes, mounted volumes, user authentication, commands executed via sudo). system.log appears on 10.8 and merges kernel.log, secure.log and system.log.
-Also, starting on 10.4, Apple System Log (ASL) is introduced and contains more information than system.log.
-  * /private/var/log/asl.log (10.4)
-  * /private/var/log/asl.db (10.5 – 10.5.6)
-  * /private/var/log/*.asl (10.5.6 - Current)
-
-## User-Specific Logs
-* ~/Libraray/Logs
-
-## Application-Specific Logs
-* /Applications/<Bundle>
-* /Library/Logs
-* /Library/Application Support/<Application>
-
-* /var/log
-* /Library/Logs
-
-User logs
-* ~/Library/Logs
-
-Application logs:
-* /Library/Application Support/<app> 
-* /Applications/
-
-Logs
-* /var/log/daily.out (e.g. information about interfaces, uptime)
-
-
-
-
-Also, kernel.log can be used to search for network country code.
-
-
-syslog replacement: /private/var/log/asl/ (>10.5.6). Can be checked using syslog. 
-/var/log/asl.log (10.4). It is plaintext.
-
-* /var/log/asl.db (10.5-10.5.6). Binary Format and can be checked using syslog -f.
-
-Audit logs (Can be read using praudit -xn): 
-* /var/audit
-* /private/var/audit/
-
-Recent folders and mounted volumes:
+## Recent folders and mounted volumes:
 * ~/Library/Preferences/com.apple.finder.plist
 * ~/Library/Preferences/com.apple.DiskUtility.plist
 * ~/Library/Preferences/com.apple.sidebarlists.plist (sidebar stuff)
@@ -101,12 +55,35 @@ Printing:
 
 
 
-Kernel.log:
-* Mac addresses
 
-Daily.log:
-* Disk Usage History
-* Time Zone Changes
+## System logs
+* /Library/Logs
+* /private/var/log (multiple logs. system.log caputes clock changes, mounted volumes, user authentication, commands executed via sudo). system.log appears on 10.8 and merges kernel.log, secure.log and system.log.
+Also, starting on 10.4, Apple System Log (ASL) is introduced and contains more information than system.log.
+  * /private/var/log/asl.log (10.4)
+  * /private/var/log/asl.db (10.5 – 10.5.6)
+  * /private/var/log/*.asl (10.5.6 - 10.12)
+  
+Starting on 10.12, the unified logging was created. Unified logging files are stored on:
+* /private/var/db.
+* /private/var/db/diagnostics/
+* /private/var/db/uuidtext
+
+## Audit Logs (>10.3)
+* /private/var/audit (e.g. file system activity, process creation, user activity)
+* /var/audit
+
+
+## User-Specific Logs
+* ~/Libraray/Logs
+
+## Application-Specific Logs
+* /Applications/<Bundle>
+* /Library/Logs
+* /Library/Application Support/<Application>
+
+## Daily Log
+* /private/var/log/daily.out (e.g. interface statistics, disk status, up time)
 
 
 Commands:
@@ -114,3 +91,17 @@ Commands:
 * ls -la /etc/localtime (timezone)
 * plutil -p [PLIST_FILE] (shows plist file in human readable form)
 * lsbom [BOM_FILE] (opens BOM file)
+* syslog -T [TIME_ZONE] -F [FORMAT] -f [FILE_PATH] (read ASL file)
+* log show [FILE_PATH] (shows inified log file)
+* praudit -xn [FILE_PATH] (show audit log file in XML format)
+
+
+#######################################################################################################################################
+Also, kernel.log can be used to search for network country code.
+Kernel.log:
+* Mac addresses
+
+Daily.log:
+* Disk Usage History
+* Time Zone Changes
+
