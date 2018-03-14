@@ -1,13 +1,14 @@
 
 # OSX Artifacts
 
-On this cheat sheet i do not discriminate the versions on which the artifacts are present.
+Some artifacts may not be present on all OSX versions.
 
 ## Installs And Updates
 * /Library/Preferences/com.apple.SoftwareUpdate.plist (updates)
 * /Library/Receipts/InstallHistory.plist and /private/var/log/install.log (software installatiom history)
 * /var/db/receipts/ (bill of materials files)
 * /Applications/[Application].app/Contents/_MASReceipt/receipt (BOM files for application)
+* /private/var/log/install.log
 
 ## Network
 * /private/var/db/dhcpclient/leases/ (dhcp leases)
@@ -22,29 +23,25 @@ On this cheat sheet i do not discriminate the versions on which the artifacts ar
 * /Library/Preferences/SystemConfiguration/com.apple.smb.server.plist (NETBIOS name)
 * /Library/Preferences/.GlobalPreferences.plist (timezone)
 
-## Recent folders and mounted volumes:
+## Recent folders and mounted volumes
 * ~/Library/Preferences/com.apple.finder.plist
 * ~/Library/Preferences/com.apple.DiskUtility.plist
 * ~/Library/Preferences/com.apple.sidebarlists.plist (sidebar stuff)
 
 
-Accounts
+## Accounts
 * /Library/Preferences/com.apple.preferences.accounts.plist
 
-Backups:
+## Backups
 * /Library/Preferences/com.apple.TimeMachine.plist
 * /var/db/com.apple.TimeMachine.SnapshotDates.plist
 
 
 
-Boot UUID:
--/System/Library/CoreServices/boot.efi
+## Boot UUID
+* /System/Library/CoreServices/boot.efi
 
-What is on system.log:
-* Backup logs
-* Boot/reboot/shutdown
-
-Printing:
+## Printing
 * /var/log/cups/page_log
 * /var/log/cups/access_log
 * /private/var/spool/cups (printing jobs. Can be parsed using cups_control from http://jafat.sourceforge.net/)
@@ -105,3 +102,7 @@ Daily.log:
 * Disk Usage History
 * Time Zone Changes
 
+
+What is on system.log:
+* Backup logs
+* Boot/reboot/shutdown
