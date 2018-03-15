@@ -73,6 +73,8 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 * ~/Library/Application Support/CrashReporter and /Library/Logs/DiagnosticReports (crash dumps for applications)
 * /var/db/systemstats/snapshots.db (tracks power usage for applications)
 * /.Spotlight-V100/VolumeConfiguration.plist 
+* /Users/[USERNAME]/Library/Containers/
+* 
 
 ## Services, daemons, kernel extensions and login items
 * [APPLICATION_BUNDLE]/Contents/XPCServices/, /System/Library/XPCServices/
@@ -174,6 +176,7 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 * /.DocumentRevisions‐V100 (contains revisions of documents)
 * .DS_Store files in general can be used to look for deleted files on directories.
 
+
 ## System logs
 * /Library/Logs
 * /private/var/log (multiple logs. system.log caputes clock changes, mounted volumes, user authentication, commands executed via sudo). system.log appears on 10.8 and merges kernel.log, secure.log and system.log.
@@ -217,3 +220,4 @@ Starting on 10.12, the unified logging was created. Unified logging files are st
 * kexstat (check loaded extensions)
 * sysctl (query Kernel information)
 * uname -a (queries kernel information)
+* spctl --assess -v [APPLICATION_BUNDLE] (checks bundle signature)
