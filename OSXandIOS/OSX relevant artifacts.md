@@ -13,8 +13,6 @@ Some artifacts may not be present on all OSX versions.
 ## Network
 * /private/var/db/dhcpclient/leases/ (dhcp leases)
 * /etc/hosts (mapping hostname, IP)
-
-## Wireless
 * /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist
 * /Library/Preferences/SystemConfiguration/com.apple.network.identification.plist (OSX <10.9) 
 
