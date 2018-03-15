@@ -137,7 +137,6 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 * ~/.Trash (trash folder for user)
 * ~/.Trash/.DS_Store (trash log. Useful to know the original path of deleted files. Use hexdump -C and then look for ptbLustr. Before is the name of the deleted file, after is the directory where it was located.) 
 * /System/Library/CoreServices/SystemVersion.plist
-* 
 
 ## System logs
 * /Library/Logs
