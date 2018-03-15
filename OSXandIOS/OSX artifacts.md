@@ -203,6 +203,8 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 * /.Spotlight‐V100 (spotlight metadata)
 * /.DocumentRevisions‐V100 (contains revisions of documents)
 * .DS_Store files in general can be used to look for deleted files on directories.
+* /private/var/vm/sleepimage (hibernation file)
+* /private/var/vm/swapfile0 (swap file)
 
 
 ## System logs
