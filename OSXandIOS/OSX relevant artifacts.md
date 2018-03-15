@@ -18,13 +18,6 @@ Some artifacts may not be present on all OSX versions.
 * /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist
 * /Library/Preferences/SystemConfiguration/com.apple.network.identification.plist (OSX <10.9) 
 
-## Misc
-* /Library/Preferences/SystemConfiguration/preferences.plist (e.g. NETBIOS name, USB interfaces, DNS servers)
-* /Library/Preferences/SystemConfiguration/com.apple.smb.server.plist (NETBIOS name)
-* /Library/Preferences/.GlobalPreferences.plist (timezone)
-* ~/.Trash (trash folder for user)
-* ~/.Trash/.DS_Store (trash log. Useful to know the original path of deleted files. Use hexdump -C and then look for ptbLustr. Before is the name of the deleted file, after is the directory where it was located.)
-
 ## GUI
 * ~/Library/Preferences/com.apple.finder.plist (e.g. volumes and recent files)
 * ~/Library/Preferences/com.apple.sidebarlists.plist
@@ -112,6 +105,13 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
  * /Library/Containers/<bundle_id>/Data/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2 (10.11)
  * ~/Library/Preferences/com.apple.LaunchServices.QuarantineEvents
  * ~/Library/Preferences/com.apple.LaunchServices.QuarantineEvents.V2 (10.7+)
+* /Library/Preferences/SystemConfiguration/preferences.plist (e.g. NETBIOS name, USB interfaces, DNS servers)
+* /Library/Preferences/SystemConfiguration/com.apple.smb.server.plist (NETBIOS name)
+* /Library/Preferences/.GlobalPreferences.plist (timezone)
+* ~/.Trash (trash folder for user)
+* ~/.Trash/.DS_Store (trash log. Useful to know the original path of deleted files. Use hexdump -C and then look for ptbLustr. Before is the name of the deleted file, after is the directory where it was located.) 
+
+ 
 
 ## System logs
 * /Library/Logs
