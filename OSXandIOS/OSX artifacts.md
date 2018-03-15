@@ -74,7 +74,8 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 * /var/db/systemstats/snapshots.db (tracks power usage for applications)
 * /.Spotlight-V100/VolumeConfiguration.plist 
 * /Users/[USERNAME]/Library/Containers/
-* 
+* /Users/[USERNAME]/Library/Preferences/com.apple.Preview.LSSharedFileList, /Users/[USERNAME]/Library/Preferences/com.apple.Preview.plist and /private/var/folders/[RANDOM_FOLDER_STRUCTURE]/com.apple.QuickLook.thumbnailcache/index.sqlite (Preview caches)
+* /Users/[USERNAME]/Library/Preferences/com.apple.sidebarlists.plist (connected media)
 
 ## Services, daemons, kernel extensions and login items
 * [APPLICATION_BUNDLE]/Contents/XPCServices/, /System/Library/XPCServices/
@@ -117,6 +118,7 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 ### Microsoft Office
 * ~Library/Preferences/com.microsoft.office.plist (2011 MRUs)
 * ~/Library/Containers/com.microsoft.<app>/Data/Library/Preferences/com.microsoft.<app>.securebookmarks.plist (2016 MRUs)
+* /Users/[USERNAME]/Library/Application Support/Microsoft/Office/Office 2011 AutoRecovery (Office documents restored by AutoRecovery service)
 
 ### Save Application State
 * ~/Library/Containers/<bundle‐ ID>/Data/Library/Saved Application State/ (windows.plist contains information about windows that should be opened when the application is executed)
@@ -134,6 +136,16 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 ### Safari
 * ~/Library/Safari/*.plist
 
+### Address Book
+* /Users/[USERNAME]/Library/Application Support/AddressBook/
+
+### Calendar
+* /Users/[USERNAME]/Library/Calendars/Calendar\ Cache
+
+### Stickies Widget
+* /Users/[USERNAME]/Library/Preferences/widget-com.apple.widget.stickies.plist
+* /Users/[USERNAME]/Library/StickiesDatabase
+* /Users/[USERNAME]/Library/Containers/com.apple.Notes/Data/Library/Notes/NotesV1.storedata-wal 
 
 ### Shell History
 * ~/.sh_history (Korn shell)
@@ -141,6 +153,18 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 * ~/.zsh_history/, ~/.zhistory, ~./history (Zshell. If none of those work, check ~/.zshrc for the location of the file).
 * ~/.bash_sessions/<GUID>.history (>10.11)
 * /var/root/[ONE_OF_THE_ABOVE]
+* /Users/[USERNAME]/Library/Preferences/com.apple.Console.plist (console search history)
+* /Users/[USERNAME]/.sqlite_history (SQLite history)
+
+### Skype
+* /Users/[USERNAME]/Library/Application\ Support/Skype/.../main.db (Skype messages history (stores conversations))
+
+### Message history or new iChat (stores conversations)
+* /Users/[USERNAME]/Library/Messages/
+* /Users/[USERNAME]/Documents/iChats/
+
+### Adium history (stores conversations)
+* /Users/[USERNAME]/Library/Application\ Support/Adium\ 2.0/Users/Default/Logs/
 
 ## Backups
 * /Library/Preferences/com.apple.TimeMachine.plist
@@ -221,3 +245,4 @@ Starting on 10.12, the unified logging was created. Unified logging files are st
 * sysctl (query Kernel information)
 * uname -a (queries kernel information)
 * spctl --assess -v [APPLICATION_BUNDLE] (checks bundle signature)
+* last (login history)
