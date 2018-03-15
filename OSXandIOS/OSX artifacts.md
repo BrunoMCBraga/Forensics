@@ -206,8 +206,8 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 * /private/var/vm/sleepimage (hibernation file)
 * /private/var/vm/swapfile0 (swap file)
 
-
-## System logs
+## Logs
+### System logs
 * /Library/Logs
 * /private/var/log (multiple logs. system.log caputes clock changes, mounted volumes, user authentication, commands executed via sudo). system.log appears on 10.8 and merges kernel.log, secure.log and system.log.
 Also, starting on 10.4, Apple System Log (ASL) is introduced and contains more information than system.log.
@@ -221,15 +221,15 @@ Starting on 10.12, the unified logging was created. Unified logging files are st
 * /private/var/db/diagnostics/
 * /private/var/db/uuidtext
 
-## Audit Logs (>10.3)
+### Audit Logs (>10.3)
 * /private/var/audit (e.g. file system activity, process creation, user activity)
 * /var/audit
 
 
-## User-Specific Logs
+### User-Specific Logs
 * ~/Libraray/Logs
 
-## Application-Specific Logs
+### Application-Specific Logs
 * /Applications/<Bundle>
 * /Library/Logs
 * /Library/Application Support/<Application>
