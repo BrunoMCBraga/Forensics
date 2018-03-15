@@ -92,6 +92,8 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 * ~/Library/Accounts/Accounts3.sqlite (e.g. Mail.app, Messages, Social Media)
 * /private/var/db/dslocal/nodes/Default/users (users information for ACL purposes)
 * /private/var/db/dslocal/nodes/Default/groups (groups information for ACL purposes)
+* /private/etc/kcpassword (encoded passqword for autologin)
+
 
 ## Applications
 
