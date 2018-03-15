@@ -16,6 +16,14 @@ Some artifacts may not be present on all OSX versions.
 * /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist
 * /Library/Preferences/SystemConfiguration/com.apple.network.identification.plist (OSX <10.9) 
 * /Library/Preferences/com.apple.Bluetooth.plist (paired devices)
+* /Library/Preferences/com.apple.alf.plist (application level firewall)
+* /etc/pf.conf (Packet Filter configuration)
+* /var/log/appfirewall.log (firewall logs)
+* /private/var/db/launchd.db/com.apple.launchd/overrides.plist 
+* /Library/Preferences/com.apple.alf.plist
+* /Library/Preferences/com.apple.VNCSettings.txt (screen sharing password)
+* /Library/Preferences/com.apple.RemoteManagement.plist (remote management configuration)
+* /Library/Preferences/com.apple.filesharingui.plist (file sharing)
 
 ## GUI
 * ~/Library/Preferences/com.apple.finder.plist (e.g. volumes and recent files)
@@ -26,6 +34,8 @@ Some artifacts may not be present on all OSX versions.
 * ~/Library/Application Support/Dock/desktoppicture.db
 * ~/Library/Preferences/com.apple.spaces.plist
 * ~/Library/Saved Application State/<Bundle ID>.savedState ~/Library/Containers/<BundleID>/Data/Library/Saved Application State/
+* ~/Library/Preferences/com.apple.spotlight.plist
+* ~/Library/Application Support/com.apple.spotlight.Shortcuts.plist 
 
 ## Recent folders, executed applications and volumes
 * ~/Library/Preferences/com.apple.finder.plist
@@ -43,12 +53,24 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 * ~/Library/Application Support/CrashReporter and /Library/Logs/DiagnosticReports (crash dumps for applications)
 * /var/db/systemstats/snapshots.db (tracks power usage for applications)
 
+## Services, daemons, kernel extensions and login items
+* /Contents/XPCServices/ /System/Library/XPCServices/
+* /Library/LaunchDaemons /System/Library/LaunchDaemons
+* /Library/LaunchAgents
+* ~/Library/LaunchAgents 
+* /System/Library/LaunchAgents
+* /System/Library/Extensions
+* /Library/Extensions
+* ~/Library/Preferences/com.apple.loginitems.plist
+
 ## Accounts
 * /Library/Preferences/com.apple.preferences.accounts.plist (deleter users)
 * /Library/Preferences/com.apple.loginwindow.plist (e.g. last connected user, whether there is a autologin user, password for autologin)
 * /private/var/db/dslocal/nodes/Default/users/[username].plist (information about users)
 * /private/var/db/dslocal/nodes/Default/groups/[groupname].plist (information about groups)
 * ~/Library/Accounts/Accounts3.sqlite (e.g. Mail.app, Messages, Social Media)
+* /private/var/db/dslocal/nodes/Default/users (users information for ACL purposes)
+* /private/var/db/dslocal/nodes/Default/groups (groups information for ACL purposes)
 
 ## Applications
 
@@ -70,6 +92,16 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 ### Microsoft Remote Desktop
 * ~/Library/Containers/com.microsoft.rdc.mac /Data/Library/Application Support/Microsoft Remote Desktop/logs/rdplog.log
 * ~/Documents/RDC Connections/ (inspect default.rdp files)
+
+### Firefox
+* ~/Library/Application Mozilla Firefox Support/Firefox/Profiles/[RANDOM].default/*.sqlite
+
+### Chrome
+* ~/Library/Application Support/Google/Chrome/Default/*
+
+### Safari
+* ~/Library/Safari/*.plist
+
 
 ### Shell History
 * ~/.sh_history (Korn shell)
@@ -104,6 +136,8 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 * /Library/Preferences/.GlobalPreferences.plist (timezone)
 * ~/.Trash (trash folder for user)
 * ~/.Trash/.DS_Store (trash log. Useful to know the original path of deleted files. Use hexdump -C and then look for ptbLustr. Before is the name of the deleted file, after is the directory where it was located.) 
+* /System/Library/CoreServices/SystemVersion.plist
+* 
 
 ## System logs
 * /Library/Logs
