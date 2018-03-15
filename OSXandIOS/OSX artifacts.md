@@ -94,6 +94,13 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 * /private/var/db/dslocal/nodes/Default/groups (groups information for ACL purposes)
 * /private/etc/kcpassword (encoded passqword for autologin)
 
+### Keychains:
+* /Users/[USERNAME]/Library/Keychains/login.keychain (keychain file)
+* /Library/Keychains/FileVaultMaster.keychain (contains the FileVault Recovery Key to use master password)
+* /Library/Keychains/System.keychain
+* /Library/Keychains/applepushserviced.keychain
+* /var/db/SystemKey (contains key to decrpyt System.Keychain)
+
 
 ## Applications
 
