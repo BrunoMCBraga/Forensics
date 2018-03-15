@@ -10,11 +10,12 @@ Some artifacts may not be present on all OSX versions.
 * /Applications/[Application].app/Contents/_MASReceipt/receipt (BOM files for application)
 * /private/var/log/install.log (only applications installed through packages)
 
-## Network
+## Network, Wireless, Bluetooth
 * /private/var/db/dhcpclient/leases/ (dhcp leases)
 * /etc/hosts (mapping hostname, IP)
 * /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist
 * /Library/Preferences/SystemConfiguration/com.apple.network.identification.plist (OSX <10.9) 
+* /Library/Preferences/com.apple.Bluetooth.plist (paired devices)
 
 ## GUI
 * ~/Library/Preferences/com.apple.finder.plist (e.g. volumes and recent files)
@@ -29,7 +30,6 @@ Some artifacts may not be present on all OSX versions.
 ## Recent folders, executed applications and volumes
 * ~/Library/Preferences/com.apple.finder.plist
 * ~/Library/Preferences/com.apple.DiskUtility.plist
-* /System/Library/CoreServices/boot.efi (boot UUID)
 * ~/Library/Logs/DiskUtility.log
 * ~/Library/Logs/fsck_hfs.log or ~/Library/Logs/fsck_apfs.log (HFS and APFS file system check log)
 For <10.10:
@@ -81,17 +81,14 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 ## Backups
 * /Library/Preferences/com.apple.TimeMachine.plist
 * /var/db/com.apple.TimeMachine.SnapshotDates.plist
-
+* /var/log/system.log
 
 ## Printing
-* /var/log/cups/page_log
-* /var/log/cups/access_log
+* /var/log/cups/page_log (e.g. printing job names)
+* /var/log/cups/access_log (e.g. printers used)
 * /private/var/spool/cups (printing jobs. Can be parsed using cups_control from http://jafat.sourceforge.net/)
-* /etc/cups/printers.conf + /Library/Preferences/org.cups.printers.plist: printer information
-* /private/var/log/cups/access_log 
+* /etc/cups/printers.conf, /Library/Preferences/org.cups.printers.plist (configured printers)
 * /private/var/log/cups/error_log 
-* /private/var/log/cups/page_log 
-
 
 ## Misc
 * ~/Downloads (user downloads)
@@ -108,8 +105,6 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 * ~/.Trash (trash folder for user)
 * ~/.Trash/.DS_Store (trash log. Useful to know the original path of deleted files. Use hexdump -C and then look for ptbLustr. Before is the name of the deleted file, after is the directory where it was located.) 
 
- 
-
 ## System logs
 * /Library/Logs
 * /private/var/log (multiple logs. system.log caputes clock changes, mounted volumes, user authentication, commands executed via sudo). system.log appears on 10.8 and merges kernel.log, secure.log and system.log.
@@ -117,6 +112,7 @@ Also, starting on 10.4, Apple System Log (ASL) is introduced and contains more i
   * /private/var/log/asl.log (10.4)
   * /private/var/log/asl.db (10.5 – 10.5.6)
   * /private/var/log/*.asl (10.5.6 - 10.12)
+* /private/var/log/daily.out (e.g. interface statistics, disk status, up time)
   
 Starting on 10.12, the unified logging was created. Unified logging files are stored on:
 * /private/var/db.
@@ -136,9 +132,6 @@ Starting on 10.12, the unified logging was created. Unified logging files are st
 * /Library/Logs
 * /Library/Application Support/<Application>
 
-## Daily Log
-* /private/var/log/daily.out (e.g. interface statistics, disk status, up time)
-
 
 ## Commands
 * system_profiler –xml –detaillevel full (reports hardware and software information)
@@ -150,4 +143,5 @@ Starting on 10.12, the unified logging was created. Unified logging files are st
 * praudit -xn [FILE_PATH] (show audit log file in XML format)
 * xattr –p [ATTRIBUTE_NAME] [FILE_NAME] (query extended attributes for file). ls -la can be used to check whether a file has extended attributes (look for a @ on the permissions).
 * mdls -name [ATTRIBUTE_NAME] [FILE] (queries spotlight metadata attribute for file). kMDItemWhereFroms can be used to check the source of the download.
+* ioreg -p IODeviceTree -n chosen (useful to inspect boot UUID to interpret some log entries. )
 
