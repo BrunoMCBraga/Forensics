@@ -206,3 +206,4 @@ Starting on 10.12, the unified logging was created. Unified logging files are st
 * ioreg -p IODeviceTree -n chosen (useful to inspect boot UUID to interpret some log entries. )
 * stat -x [FILE] (e.g. inode, timestamps)
 * kexstat (check loaded extensions)
+* sysctl (query Kernel information)
