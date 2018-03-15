@@ -48,7 +48,8 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 ## Accounts
 * /Library/Preferences/com.apple.preferences.accounts.plist (deleter users)
 * /Library/Preferences/com.apple.loginwindow.plist (e.g. last connected user, whether there is a autologin user, password for autologin)
-* /private/var/db/dslocal/nodes/Default/users/[username].plist and /private/var/db/dslocal/nodes/Default/groups/[groupname].plist (information about users and groups)
+* /private/var/db/dslocal/nodes/Default/users/[username].plist (information about users)
+* /private/var/db/dslocal/nodes/Default/groups/[groupname].plist (information about groups)
 * ~/Library/Accounts/Accounts3.sqlite (e.g. Mail.app, Messages, Social Media)
 
 ## Applications
