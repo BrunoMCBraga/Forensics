@@ -31,6 +31,9 @@ Some artifacts may not be present on all OSX versions.
 ## Recent folders, executed applications and volumes
 * ~/Library/Preferences/com.apple.finder.plist
 * ~/Library/Preferences/com.apple.DiskUtility.plist
+* /System/Library/CoreServices/boot.efi (boot UUID)
+* ~/Library/Logs/DiskUtility.log
+* ~/Library/Logs/fsck_hfs.log or ~/Library/Logs/fsck_apfs.log (HFS and APFS file system check log)
 For <10.10:
 * ~/Library/Preferences/com.developer.app.LSSharedFileList.plist (e.g. recent documents per application.)
 * ~/Library/Preferences/com.apple.recentitems.plist (e.g. applications, documents, servers, hosts. Works for <10.10)
@@ -79,11 +82,6 @@ These values are updated by LaunchServices upon doubl-eclicking or when an appli
 ## Backups
 * /Library/Preferences/com.apple.TimeMachine.plist
 * /var/db/com.apple.TimeMachine.SnapshotDates.plist
-
-## Volumes, File System and Boot information
-* /System/Library/CoreServices/boot.efi (boot UUID)
-* ~/Library/Logs/DiskUtility.log
-* ~/Library/Logs/fsck_hfs.log or ~/Library/Logs/fsck_apfs.log (HFS and APFS file system check log)
 
 
 ## Printing
