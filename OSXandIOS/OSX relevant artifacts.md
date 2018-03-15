@@ -153,16 +153,3 @@ Starting on 10.12, the unified logging was created. Unified logging files are st
 * xattr –p [ATTRIBUTE_NAME] [FILE_NAME] (query extended attributes for file). ls -la can be used to check whether a file has extended attributes (look for a @ on the permissions).
 * mdls -name [ATTRIBUTE_NAME] [FILE] (queries spotlight metadata attribute for file). kMDItemWhereFroms can be used to check the source of the download.
 
-#######################################################################################################################################
-Also, kernel.log can be used to search for network country code.
-Kernel.log:
-* Mac addresses
-
-Daily.log:
-* Disk Usage History
-* Time Zone Changes
-
-
-What is on system.log:
-* Backup logs
-* Boot/reboot/shutdown
