@@ -215,7 +215,8 @@ Also, starting on 10.4, Apple System Log (ASL) is introduced and contains more i
   * /private/var/log/asl.db (10.5 – 10.5.6)
   * /private/var/log/*.asl (10.5.6 - 10.12)
 * /private/var/log/daily.out (e.g. interface statistics, disk status, up time)
-  
+* /var/log/auth.log (authentications)
+
 Starting on 10.12, the unified logging was created. Unified logging files are stored on:
 * /private/var/db.
 * /private/var/db/diagnostics/
