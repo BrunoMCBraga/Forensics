@@ -142,7 +142,7 @@ Starting on 10.12, the unified logging was created. Unified logging files are st
 * /private/var/log/daily.out (e.g. interface statistics, disk status, up time)
 
 
-Commands:
+## Commands
 * system_profiler –xml –detaillevel full (reports hardware and software information)
 * ls -la /etc/localtime (timezone)
 * plutil -p [PLIST_FILE] (shows plist file in human readable form)
