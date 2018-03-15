@@ -1,0 +1,18 @@
+## OSX relevant directories
+* /Applications
+* /System (e.g. system libraries, configurations)
+* /Volumes (e.g. mounted volumes, DMGs)
+* /Network (e.g. network devices, servers)
+* /Library (e.g. shared libraries, settings, preferences)
+* /Users (user accounts)
+* /bin (e.g. common binaries)
+* /sbin (e.g. administrative tools)
+* /usr (e.g. e.g. libraries, binaries, configuration files)
+* /var (symbolic link to /private/var. Contains files generated and modified through execution of the OS)
+* /etc (e.g. system configurations, administrative files)
+* /dev (peripheral devices)
+* /tmp (temporary files)
+* /opt (not widely used but should hold optional software and packages)
+* /.vol (pseudo-directory is used to access files by their ID number (aka inode number))
+* /.Trashes (files and folders from boot volume)
+
