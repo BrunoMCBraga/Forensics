@@ -44,6 +44,7 @@ Some artifacts may not be present on all OSX versions.
 * /Library/Preferences/com.apple.VNCSettings.txt (screen sharing password)
 * /Library/Preferences/com.apple.RemoteManagement.plist (remote management configuration)
 * /Library/Preferences/com.apple.filesharingui.plist (file sharing)
+* /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist (network interfaces)
 
 ## GUI
 * ~/Library/Preferences/com.apple.finder.plist (e.g. volumes and recent files)
